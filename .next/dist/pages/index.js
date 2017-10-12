@@ -78,9 +78,11 @@ var _class = function (_React$Component) {
 
 	在 package.json 添加下面的npm脚本命令
 
-	"scripts": {
-		"dev": "next"
-	}
+		"scripts": {
+			"dev": "next",
+		    "build": "next build",
+		    "start": "next start"
+		}
 
 	npm run dev
 
@@ -89,7 +91,7 @@ var _class = function (_React$Component) {
 	此时还没有任何页面
 
 	创建页面
-	pages 下 创建index.js
+	pages下创建index.js等页面，语法和react相同
 
 		import React from 'react'
 		export default class extends React.Component {
@@ -113,10 +115,48 @@ var _class = function (_React$Component) {
 			}
 		}
 
-	语法和react相同
+	行内样式
+		<p style={{ color: 'red' }}>
+	
+	heade添加标签
+		import Head from 'next/head'
+		export default () =>
+			<div>
+				<Head>
+					<title>My page title</title>
+					<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				</Head>
+				<p>Hello world!</p>
+			</div>
+	
+	fetch 数据请求
+		import fetch from 'isomorphic-fetch'
+		async getInitialProps() {
+			const res = await fetch('https://b2b.hzanchu.com/api.php?s=api/order/getlist')
+			const statusCode = res.statusCode > 200 ? res.statusCode : false
+			const json = await res.json()
+			console.log(res)
+		}
+
+	参数跳转
+		import Link from 'next/link'
+		import Router from 'next/router'
+		
+		<Link href={{ pathname: '/index', query: { name: 'lucy' } }}>
+			<p>标签跳转index</p>
+		</Link>
+
+		handler(){
+			Router.push({
+				pathname: '/index',
+				query: { name: 'YUMI' }
+			})
+		}
+
+
 
 
 */
 
 exports.default = _class;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsInN0YXRlIiwic2l0ZUluZm8iLCJuYW1lIiwiQ29tcG9uZW50Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU87Ozs7Ozs7Ozs7aUNBSU47O21CQUFhO3NDQUFBOzs4SEFFWjs7UUFBQSxBQUFLOztVQUZPLEFBRVosQUFBYSxBQUNILEFBQ0g7QUFERyxBQUNSOztBQUZXLEFBQ1o7U0FLRDs7Ozs7MkJBRVEsQUFDTDswQkFDRixjQUFBOztlQUFBO2lCQUFBLEFBQ0M7QUFERDtBQUFBLElBQUEsa0JBQ0MsY0FBQTs7ZUFBQTtpQkFBQSxBQUFJO0FBQUo7QUFBQSxXQUFJLEFBQUssTUFBTCxBQUFXLFNBRmQsQUFDRixBQUNDLEFBQXdCLEFBRzFCOzs7OztFQWxCMkIsZ0JBQU0sQTs7QUF1Qm5DOztBQUVBIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6IkQ6L3NvbWVUZXN0L05leHRKcyJ9
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsInN0YXRlIiwic2l0ZUluZm8iLCJuYW1lIiwiQ29tcG9uZW50Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU87Ozs7Ozs7Ozs7aUNBSU47O21CQUFhO3NDQUFBOzs4SEFFWjs7UUFBQSxBQUFLOztVQUZPLEFBRVosQUFBYSxBQUNILEFBQ0g7QUFERyxBQUNSOztBQUZXLEFBQ1o7U0FLRDs7Ozs7MkJBRVEsQUFDTDswQkFDRixjQUFBOztlQUFBO2lCQUFBLEFBQ0M7QUFERDtBQUFBLElBQUEsa0JBQ0MsY0FBQTs7ZUFBQTtpQkFBQSxBQUFJO0FBQUo7QUFBQSxXQUFJLEFBQUssTUFBTCxBQUFXLFNBRmQsQUFDRixBQUNDLEFBQXdCLEFBRzFCOzs7OztFQWxCMkIsZ0JBQU0sQTs7QUFzQm5DOztBQUVBIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6IkQ6L3NvbWVUZXN0L05leHRKcyJ9
