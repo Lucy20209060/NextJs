@@ -8,7 +8,6 @@ import fetch from 'isomorphic-fetch'
 
 // 组件引入
 import Index from './index'
-	
 
 export default class extends React.Component {
 

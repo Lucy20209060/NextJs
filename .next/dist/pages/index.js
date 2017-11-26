@@ -30,9 +30,6 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var _jsxFileName = 'D:\\someTest\\NextJs\\pages\\index.js?entry';
-
-
 var _class = function (_React$Component) {
 	(0, _inherits3.default)(_class, _React$Component);
 
@@ -53,17 +50,7 @@ var _class = function (_React$Component) {
 	(0, _createClass3.default)(_class, [{
 		key: 'render',
 		value: function render() {
-			return _react2.default.createElement('div', {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 17
-				}
-			}, _react2.default.createElement('p', {
-				__source: {
-					fileName: _jsxFileName,
-					lineNumber: 18
-				}
-			}, this.state.siteInfo.name));
+			return _react2.default.createElement('div', null, _react2.default.createElement('p', null, this.state.siteInfo.name));
 		}
 	}]);
 
@@ -159,4 +146,3 @@ var _class = function (_React$Component) {
 */
 
 exports.default = _class;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsInN0YXRlIiwic2l0ZUluZm8iLCJuYW1lIiwiQ29tcG9uZW50Il0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU87Ozs7Ozs7Ozs7aUNBSU47O21CQUFhO3NDQUFBOzs4SEFFWjs7UUFBQSxBQUFLOztVQUZPLEFBRVosQUFBYSxBQUNILEFBQ0g7QUFERyxBQUNSOztBQUZXLEFBQ1o7U0FLRDs7Ozs7MkJBRVEsQUFDTDswQkFDRixjQUFBOztlQUFBO2lCQUFBLEFBQ0M7QUFERDtBQUFBLElBQUEsa0JBQ0MsY0FBQTs7ZUFBQTtpQkFBQSxBQUFJO0FBQUo7QUFBQSxXQUFJLEFBQUssTUFBTCxBQUFXLFNBRmQsQUFDRixBQUNDLEFBQXdCLEFBRzFCOzs7OztFQWxCMkIsZ0JBQU0sQTs7QUFzQm5DOztBQUVBIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6IkQ6L3NvbWVUZXN0L05leHRKcyJ9
