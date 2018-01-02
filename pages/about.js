@@ -51,7 +51,7 @@ export default class extends React.Component {
 
 				{/* 在head中增加标签 */}
 				<Head>
-					<title>My page title</title>
+					<title>about page</title>
 					<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 				</Head>
 
