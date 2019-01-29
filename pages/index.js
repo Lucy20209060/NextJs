@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 
 export default class extends React.Component {
 
@@ -15,6 +16,11 @@ export default class extends React.Component {
 	render() {
 	    return (
 			<div>
+				{/* 在head中增加标签 */}
+				<Head>
+					<title>index page</title>
+					<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				</Head>
 				<p>{this.state.siteInfo.name}</p>
 			</div>
 	    )
